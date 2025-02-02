@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta de Novios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            padding: 50px;
+        }
+        .mensaje {
+            background-color: #ffb6c1;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .mensaje h1 {
+            font-size: 2em;
+            color: #fff;
+        }
+        .mensaje p {
+            font-size: 1.2em;
+            color: #fff;
+        }
+        .boton {
+            background-color: #ff69b4;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .boton:hover {
+            background-color: #ff1493;
+        }
+        .boton.no {
+            background-color: #f44336;
+        }
+        .boton.no:hover {
+            background-color: #d32f2f;
+        }
+        .resultado {
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="mensaje">
+        <h1>¡Hola Alejandro!</h1>
+        <p>Quería preguntarte algo muy importante:</p>
+        <p>¿Quieres ser mi novio?</p>
+        <a href="#" class="boton" onclick="mostrarRespuesta('si')">¡Sí, claro!</a>
+        <a href="#" class="boton no" onclick="mostrarRespuesta('no')">No, gracias</a>
+    </div>
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        function mostrarRespuesta(respuesta) {
+            const resultado = document.getElementById('resultado');
+            if (respuesta === 'si') {
+                resultado.innerHTML = '¡Enhorabuena! Duren mucho 🥳';
+                resultado.style.color = '#32CD32'; // Verde
+            } else {
+                resultado.innerHTML = '¿No te da pena la otra persona? 😢';
+                resultado.style.color = '#f44336'; // Rojo
+            }
+        }
+    </script>
+</body>
+</html>
